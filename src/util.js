@@ -77,7 +77,7 @@ tagsInput.factory('tiUtil', function($timeout, $q) {
     };
 
     self.safeToString = function(value) {
-        return angular.isUndefined(value) || value == null ? '' : value.toString().trim();
+        return angular.isUndefined(value) || value == null ? '' : (value.toString().length && !value.toString().trim().length) ?  value.toString() : value.toString().trim();
     };
 
     self.encodeHTML = function(value) {
