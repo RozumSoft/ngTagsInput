@@ -16,7 +16,7 @@ tagsInput.directive('tiTagItem', function(tiUtil) {
             $scope: '=scope',
             data: '='
         },
-        link: function(scope, element, attrs, tagsInputCtrl) {
+        link: function(scope, element) {
             var tagsInputCtrl = element.parent().controller('tagsInput');
             if(tagsInputCtrl) {
                 var tagsInput = tagsInputCtrl.registerTagItem(),
